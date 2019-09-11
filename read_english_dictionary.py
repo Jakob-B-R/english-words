@@ -6,6 +6,15 @@ def load_words():
 
 
 if __name__ == '__main__':
+    cie_count = 0
+    cei_count = 0
     english_words = load_words()
     # demo print
-    print('fate' in english_words)
+    for word in english_words:
+        if('cie' in word):
+            cie_count+=1
+            print('\t',word)
+        elif('cei' in word):
+            cei_count+=1
+            print(word)
+    print('cie ->', cie_count, '\ncei ->', cei_count)
